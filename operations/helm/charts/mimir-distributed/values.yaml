@@ -3285,6 +3285,8 @@ metaMonitoring:
     # Does not affect the ServiceMonitors for kubernetes metrics; use serviceMonitor.annotations for that.
     annotations: {}
 
+    tolerations: []
+
     # -- SecurityContext of Grafana Agent pods. This is different from the SecurityContext that the operator pod runs with.
     # The operator pod SecurityContext is configured in the grafana-agent-operator.podSecurityContext value.
     # As of mimir-distributed 4.0.0 the Agent DaemonSet that collects logs needs to run as root and be able to access the
