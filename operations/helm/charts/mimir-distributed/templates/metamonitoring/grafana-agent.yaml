@@ -55,5 +55,8 @@ spec:
         {{- include "mimir.selectorLabels" (dict "ctx" $ "component" "meta-monitoring") | nindent 8 }}
     externalLabels:
       cluster: {{ include "mimir.clusterName" $ }}
+
+  tolerations:
+    {{- toYaml .tolerations | nindent 4 }}
 {{- end }}
 {{- end }}
